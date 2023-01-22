@@ -1,7 +1,7 @@
-import { nanoid } from 'nanoid';
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { addContact, getContacts } from 'redux/contactsSlice';
+import { getContacts } from 'redux/contactSelectors';
+import { addContact } from 'redux/contactsSlice';
 import s from './styles.module.css';
 
 export default function ContactForm() {
@@ -20,7 +20,6 @@ export default function ContactForm() {
     const newContactItem = {
       name,
       number,
-      id: nanoid(),
     };
 
     contacts.find(contact => contact.name.toLowerCase() === name.toLowerCase())
@@ -66,7 +65,7 @@ export default function ContactForm() {
               title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
               required
               autoComplete="off"
-              placeholder="000-00-00"
+              placeholder="+38(000) 000-00-00"
             />
           </div>
           <div className={s.formBtn}>

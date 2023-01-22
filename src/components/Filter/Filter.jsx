@@ -1,16 +1,17 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { filterContacts, getFilter } from 'redux/contactsSlice';
+import { getFilter } from 'redux/contactSelectors';
+import { filterContacts } from 'redux/contactsSlice';
 import s from './styles.module.css';
 
 export default function Filter() {
   const filter = useSelector(getFilter);
-  const dispatch = useDispatch('');
+  const dispatch = useDispatch();
 
   const handleFilter = e => dispatch(filterContacts(e.target.value));
   return (
     <>
       <div className={s.filterContainer}>
-        <label>
+        <label className={s.filterFocus}>
           <input
             type="text"
             name="filter"

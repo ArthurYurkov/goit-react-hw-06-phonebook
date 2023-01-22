@@ -14,6 +14,7 @@
     rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
   color: #32598d;
   z-index: 2;
+  border: 2px solid #ffffff;
 }
 
 .contactList {
@@ -52,5 +53,5 @@
   background-color: #f3f4ed;
   color: #4178c0;
   box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
-  scale: 1.03;
+  /* scale: 1.03; */
 }

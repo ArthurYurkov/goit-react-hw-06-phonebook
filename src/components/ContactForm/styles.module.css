@@ -12,6 +12,8 @@
     rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
   color: #32598d;
   z-index: 2;
+
+  border: 2px solid #ffffff;
 }
 
 .formInput {
@@ -22,7 +24,7 @@
   font-size: 12px;
   gap: 5px;
   color: #32598d;
-  margin-bottom: 20px;
+  margin-top: 30px;
   scale: 1.5;
 }
 
@@ -32,9 +34,9 @@
   background-color: #4178c0;
   color: #f3f4ed;
   width: auto;
-  height: 30px;
+  height: 20px;
   position: relative;
-  top: 20px;
+  top: 10px;
   z-index: 1;
   border-radius: 5px;
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
@@ -52,9 +54,17 @@
   z-index: 2;
 }
 
+.inpt:focus {
+  outline: none;
+}
+
+.formBtn {
+  display: flex;
+}
+
 .btn {
   border: none;
-  margin-top: 30px;
+  margin-top: 50px;
   height: 60px;
   width: 200px;
   border-radius: 10px;
